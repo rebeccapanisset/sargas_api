@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="pageHeader">
+      <img src="file://{{header}}" />
+    </div>
+
+    <main>
+      <div class="pdf">
+        <div class="number">
+          <strong>
+            <h4>Proposta Nº: <b style="color: red">{{number}}</b></h4>
+          </strong>
+        </div>
+        <div class="date">
+          <strong>
+            <h4>Anápolis, {{date}}</h4>
+          </strong>
+        </div>
+        <div style="clear:both"></div>
+        <div>
+          {{{content}}}
+        </div>
+      </div>
+    </main>
+
+    <div id="pageFooter">
+      <img src="file://{{footer}}" />
+    </div>
+  </body>
+  <style>
+    @page {
+      margin: 0px 0px 0px 0px !important;
+      padding: 0px 0px 0px 0px !important;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #pageHeader img {
+      position: relative;
+      width: 100%;
+    }
+    #pageFooter img {
+      position: relative;
+      width: 100%;
+    }
+
+    body {
+      background:transparent url("../../../tmp/uploads/images/pdf_config/pdf_watermark.png") no-repeat;
+      background-position: center center;
+      background-size:cover;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 12px;
+      page-break-after: auto;
+    }
+
+    table, th, td {
+      border: 1px solid black;
+    }
+    table tr td,
+    table tr th {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+
+    .pdf {
+      padding: 30px;
+      position: relative;
+    }
+
+    .number {
+      float: left;
+      margin-top: 10px;
+    }
+
+    .date {
+      float: right;
+      margin-top: 10px;
+    }
+
+    .number, .date strong h4 {
+      font-size: 12px;
+      margin: 0 0 20px;
+    }
+
+    .signature {
+      font-size: 12px;
+      float: left;
+      width: 200px;
+      border-bottom: 1px solid #000;
+    }
+
+    .signature, .clientSignature strong {
+      display: block;
+      padding-bottom: 10px;
+      width: 200px;
+      text-align: center;
+      min-height: 35px;
+    }
+
+    .signature strong img {
+      width: 100px;
+      margin-top: -10px;
+    }
+
+    .clientSignature {
+      float: right;
+      width: 200px;
+      border-bottom: 1px solid #000;
+    }
+  </style>
+</html>
