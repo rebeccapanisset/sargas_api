@@ -1,26 +1,26 @@
 # SARGAS
 
-Este projeto foi realizado para para facilitar a gerência, controle e geração de contratos de venda de tanques de armazenamento para uma empresa.
+This is the back-end of SARGAS project. This project was developed to help with the management, control and generation of storage tank sales contracts for a company.
 
-Antigamente tais tarefas eram realizadas manualmente por parte do contratante, que editava arquivos de texto a cada novo tanque gerado.
+In the past, such tasks were performed manually by the client, who has to edit text filesfor each new tank budget or contract.
 
-Agora, por meio da plataforma, foram automatizados os sequintes tópicos:
+Now, with the new application, the following topics have been developed:
 
-1. Manipulação de Usuários
-2. Manipulação de Clientes
-3. Manipulação de Caminhões
-4. Manipulação de Produtos (Tanques de Combustível, Aéreo, Pipa e Caixa D'Água)
-5. Acesso autenticado
-6. Geração de Orçamento
-7. Negociação de Orçamento
-8. Envio do Orçamento por e-mail
-9. Geração de Contrato
-10. Configurações de funcionamento para a plataforma
-11. Personalização do documento de orçamento e contrato
-12. Arquivamento e expiração de orçamentos automático.
-13. Desarquivamento de orçamento manual.
+1. Users CRUD;
+2. Clients CRUD;
+3. Trucks CRUD;
+4. Products CRUD (Aerial Tank, Fuel Tank, Pipa Tank e Water Tank);
+5. Authenticated access;
+6. Budget creation;
+7. Budget negotiation;
+8. Sanding budget by e-mail;
+9. Contract creation;
+10. General settings;
+11. Customization of budget and contract documents;
+12. Automatic budget archiving and expiration;
+13. Manual budget unarchiving.
 
-## Tecnologias Utilizadas
+## Used Technologies
 
 * AdonisJS
 * PostgreSQL
@@ -31,27 +31,27 @@ Agora, por meio da plataforma, foram automatizados os sequintes tópicos:
 * pdf-creator-node (https://github.com/hajareshyam/pdf-creator-node)
 * adonis-scheduler (https://github.com/nrempel/adonis-scheduler)
 
-## Como Instalar e Executar
+## How to Install and Run
 
 1. ``` git clone https://github.com/rebeccapanisset/sargas_api.git ```
-2. Entre na pasta do projeto ``` cd github-explorer ```
-3. ``` yarn install ``` (para instalar todas as dependências)
+2. Open the project folder ``` cd sargas_api ```
+3. ``` yarn install ``` (install all dependencies)
 
-### Configurando .env
+### Configuring .env
 
-1. Faça uma cópia do arquivo base ``` .env.example ``` e renomeie para ``` .env ```
-2. Preencha o arquivo ``` .env ``` com as informações necessárias
-3. Execute o comando ``` adonis key:generate ``` para gerar a chave da aplicação
+1. Make a copy of the base file ``` .env.example ``` and rename it to ``` .env ```
+2. Fill the file ``` .env ``` with the necessary information
+3. Run ``` adonis key:generate ``` to generate the application key
 
-### Banco de Dados e Migrations
+### Data Base and Migrations
 
-1. Crie um banco (PostgreSQL) com o nome de sargas
-2. Execute o comando ``` adonis migration:run ``` para criar as tabelas no banco
-3. Execute o comando ``` adonis seed ``` para criar o usuário administrador (as credenciais do administrador são informadas no .env)
+1. Create a database (PostgreSQL) with the name 'sargas'
+2. Run ``` adonis migration:run ``` to create the database tables
+3. Run ``` adonis seed ``` to create a administrator user (the administrator credencials are registered in the '.env' file)
 
-### Execução
+### Execution
 
-1. Execute o comando ``` adonis serve ``` para iniciar o servidor, ou ``` adonis serve --dev ``` para o modo de desenvolvimento
-2. Execute o comando ``` adonis kue:listen ``` para iniciar o gerenciador de kues
-3. Execute o comando ``` node ace run:scheduler ``` para executar o schedule
+1. Run ``` adonis serve ``` to start server, or run ``` adonis serve --dev ``` to start the development mode
+2. Run ``` adonis kue:listen ``` to start the kue manager
+3. Run ``` node ace run:scheduler ``` to start schedule
 
