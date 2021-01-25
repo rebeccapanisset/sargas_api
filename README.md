@@ -45,7 +45,7 @@ Now, with the new application, the following topics have been developed:
 
 ### Data Base and Migrations
 
-1. Create a database (PostgreSQL) with the name 'sargas'
+1. Create a PostgreSQL database named 'sargas'
 2. Run ``` adonis migration:run ``` to create the database tables
 3. Run ``` adonis seed ``` to create a administrator user (the administrator credencials are registered in the '.env' file)
 
